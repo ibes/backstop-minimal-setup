@@ -6,9 +6,9 @@
   "scripts": {
     "backstop:approve": "backstop approve --config=tests/backstop/backstop.js",
     "backstop:test": "npm run clean:bitmaps_test && backstop test --config=tests/backstop/backstop.js",
+    "backstop:test:docker": "npm run clean:bitmaps_test && backstop test --config=tests/backstop/backstop.js --docker",
     "clean:bitmaps_test": "rimraf tests/backstop/bitmaps_test",
-    "test": "npm run backstop:test",
-    "test:docker": "npm run clean:bitmaps_test && backstop test --config=tests/backstop/backstop.js --docker"
+    "test": "npm run backstop:test"
   },
   "author": "",
   "license": "ISC",
