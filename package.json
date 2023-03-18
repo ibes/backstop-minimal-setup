@@ -1,0 +1,21 @@
+{
+  "name": "mtnl-backstop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backstop:approve": "backstop approve --config=tests/backstop/backstop.js",
+    "backstop:test": "npm run clean:bitmaps_test && backstop test --config=tests/backstop/backstop.js",
+    "clean:bitmaps_test": "rimraf tests/backstop/bitmaps_test",
+    "test": "npm run backstop:test",
+    "test:docker": "npm run clean:bitmaps_test && backstop test --config=tests/backstop/backstop.js --docker"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "backstopjs": "^6.1.4",
+    "rimraf": "^4.4.0"
+  }
+}
